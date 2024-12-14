@@ -20,7 +20,7 @@ function removeFile(FilePath) {
 
 router.get('/', async (req, res) => {
     let num = req.query.number;
-    async function PrabathPair() {
+    async function ImmanuelPair() {
         const { state, saveCreds } = await useMultiFileAuthState(`./session`);
         try {
             let PrabathPairWeb = makeWASocket({
@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
             if (!PrabathPairWeb.authState.creds.registered) {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
-                const code = await PrabathPairWeb.requestPairingCode(num);
+                const code = await ImmanuelWRLD999-Web-pair.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });
                 }
@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
                 if (connection === "open") {
                     try {
                         await delay(10000);
-                        const sessionPrabath = fs.readFileSync('./session/creds.json');
+                        const sessionimmanuel = fs.readFileSync('./session/creds.json');
 
                         const auth_path = './session/';
                         const user_jid = jidNormalizedUser(PrabathPairWeb.user.id);
@@ -69,7 +69,7 @@ router.get('/', async (req, res) => {
 
                         const sid = string_session;
 
-                        const dt = await PrabathPairWeb.sendMessage(user_jid, {
+                        const dt = await Immanuel999-web-pair.sendMessage(user_jid, {
                             text: sid
                         });
 
@@ -86,16 +86,16 @@ router.get('/', async (req, res) => {
                 }
             });
         } catch (err) {
-            exec('pm2 restart prabath-md');
+            exec('pm2 restart Immanuel999-bot-md');
             console.log("service restarted");
-            PrabathPair();
+            ImmanuelPair();
             await removeFile('./session');
             if (!res.headersSent) {
                 await res.send({ code: "Service Unavailable" });
             }
         }
     }
-    return await PrabathPair();
+    return await ImmanuelPair();
 });
 
 process.on('uncaughtException', function (err) {
