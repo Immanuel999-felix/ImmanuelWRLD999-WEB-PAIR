@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #141414;
+      background-color: #191919;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -149,7 +149,7 @@
             <br>
             <h6>🔢 Enter your number with country code.</h6>
             <div class="input-container">
-              <input placeholder="+94729xxxxxx" type="number" id="number" placeholder="❗ Enter your phone number with country code" name="">
+              <input placeholder="+234912xxxxxx" type="number" id="number" placeholder="❗ Enter your phone number with country code" name="">
               <button id="submit">Submit</button>
             </div>
             <!-- Add the loading spinner -->
@@ -178,7 +178,7 @@
       let text = document.getElementById("copy").innerText;
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
-      obj.innerText = "✔️ COPIED";
+      obj.innerText = "✔️ COPIED🙂";
       obj.style = "color:red;font-weight:bold";
       obj.size = "5";
       setTimeout(() => {
